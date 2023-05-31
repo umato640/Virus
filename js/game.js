@@ -103,7 +103,6 @@ export default class Game {
     if (nJugador === this.torn) {
       const deckJugador = this.getDeckJugador(nJugador);
       const card = deckJugador.get(idCard - 1);
-      // evitar referencia new Card(card.suit, card.color, card.img)
       this.deck.push(card);
       deckJugador.change(idCard - 1, undefined);
     };
