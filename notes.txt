@@ -1,0 +1,18 @@
+Dos jugadors o un jugador contra la màquina
+Tratamientos (No)
+
+Un jugador, Dos jugadors
+Canviar, Seguir o reiniciar
+
+Max 3 cartes, on es poden descartar i agafar les que vulguis
+
+---
+Seguir
+
+alerta -> afegir onclicks
+
+Afegir metodes a la classe cos per poder verificar que es pugui
+
+Jugador drag and drop check mirar
+
+Comodi al check guanyador

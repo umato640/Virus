@@ -1,0 +1,270 @@
+@font-face {
+    font-family: "Bebas";
+    src: url("/fonts/BebasNeue-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: aqua;
+    background-image: url("/img/virus.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    overflow: hidden;
+}
+
+/*
+    ALERTA
+*/  
+
+.alerta {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    left: 0;
+    top: 0;
+}
+
+.alerta-contingut {
+    position: relative;
+    width: 26%;
+    height: 40%;
+    margin: auto;
+    margin-top: 15%;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0px 0px 40px black;
+    text-align: center;
+    padding: 2%;
+}
+
+.alerta-contingut-titol {
+    font-size: 1.6vw;
+    font-family: "Bebas";
+}
+
+.alerta-contingut-text {
+    font-size: 0.9vw;
+    color: grey;
+    text-align: justify;
+}
+
+.alerta-butons {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 6% 0% 6% 0%;
+}
+
+.alerta-butons button {
+    background: none;
+    border: none;
+    background-color: aqua;
+    font-family: "Bebas";
+    text-transform: uppercase;
+    font-size: 1vw;
+    padding: 1vw 4vw 1vw 4vw;
+    border-radius: 20px;
+}
+
+
+.alerta-butons button:hover {
+    box-shadow: 0 0 20px aqua;
+    cursor: pointer;
+}
+
+/*
+    TAULA
+*/
+
+.taula {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 20vw 30vw 30vw 20vw;
+    width: 100vw;
+    height: 100vh;
+}
+
+.taula div {    
+    height: 100%;
+}
+
+.taula .jugador .baralla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taula .jugador .baralla .descart {
+    position: absolute;
+    z-index: 1;
+    background-color: #79BCFF;
+    box-shadow: 0 0 20px grey;
+    border-radius: 100%;
+    width: 20vw;
+    height: 20vw;
+}
+
+.taula #jugador1 .baralla .descart {
+    left: -10vw;
+}
+
+.taula #jugador2 .baralla .descart {
+    right: -10vw;
+}
+
+/* 
+    BUTONS CANVIAR TORN
+*/
+
+.next-button {
+    position: absolute;
+    width: 4vw;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.next-button:hover {
+    box-shadow: 0 0 10px grey;
+}
+
+#jugador1 .next-button {
+    top: 2vw;
+    left: 2vw;
+}
+
+#jugador2 .next-button {
+    top: 2vw;
+    right: 2vw;
+    transform: rotate(180deg);
+}
+
+/*
+    CARTES JUGADORS
+*/
+
+.taula .jugador .baralla .cartes {
+    position: relative;
+    user-select: none;
+    z-index: 0;
+}
+
+.taula .jugador .baralla .cartes img {
+    position: relative;
+    width: 10vw;
+    height: 14vw; 
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.taula .jugador .baralla .cartes .carta-1 {
+    z-index: 1;
+}
+
+.taula .jugador .baralla .cartes .carta-2 {
+    z-index: 2;
+}
+
+.taula .jugador .baralla .cartes .carta-3 {
+    z-index: 3;
+}
+
+/*
+    CARTES JUGADOR 2
+*/
+
+.taula #jugador2 .baralla .cartes {
+    position: absolute;
+    height: auto;
+    transform: rotate(-90deg);
+    right: -7vw;
+}
+
+.taula #jugador2 .baralla .cartes .carta-3 {
+    transform: rotate(30deg);
+    left: -2vw;
+    bottom: -2vw;
+}
+
+.taula #jugador2 .baralla .cartes .carta-1 {
+    transform: rotate(-30deg);
+    right: -2vw;
+    bottom: -2vw;
+}
+
+/*
+    CARTES JUGADOR 1
+*/
+
+.taula #jugador1 .baralla .cartes {
+    position: absolute;
+    height: auto;
+    transform: rotate(90deg);
+    left: -7vw;
+}
+
+.taula #jugador1 .baralla .cartes .carta-3 {
+    transform: rotate(30deg);
+    left: -2vw;
+    bottom: -2vw;
+}
+
+.taula #jugador1 .baralla .cartes .carta-1 {
+    transform: rotate(-30deg);
+    right: -2vw;
+    bottom: -2vw;
+}
+
+/* 
+    COS
+*/
+
+.taula .cos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.taula .cos .carta {
+    display: flex;
+    border-radius: 10px;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    height: 20vh;
+    align-items: center;
+    user-select: none;
+}
+
+.taula .cos .carta img {
+    width: 8vw;
+    height: 12vw;
+    border-radius: 10px;
+}
+
+/*
+    COS JUGADOR 1
+*/
+
+.taula #cos-jugador-1 .carta img{
+    transform: rotate(90deg);
+}
+
+/*
+    COS JUGADOR 2
+*/
+
+.taula #cos-jugador-2 .carta {
+    transform: rotate(180deg);
+}
+
+.taula #cos-jugador-2 .carta img {
+    transform: rotate(90deg);
+}
